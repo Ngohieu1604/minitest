@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bài3e</title>
 </head>
 <body>
-
+<h1>hello world</h1>
+<input type="number" onchange="tamGiac()" id="a">
+<input type="number" onchange="tamGiac()" id="b">
+<input type="number" onchange="tamGiac()" id="c">
+<p id="kito"></p>
+<p id="imba"></p>
 </body>
 </html>
+<script>
+    function tamGiac() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let c = Number(document.getElementById("c").value);
+        let kito = document.getElementById("kito");
+        let imba= document.getElementById("imba");
+        {
+            if (a <= 0 || b <= 0 || c <= 0) {
+                kito.innerText="hình trên không phải tam giác";
+            } else {
+                if (a + b > c && a + c > b && b + c > a) {
+                    kito.innerText = "hình này là tam giác";
+                    if (a == b || b == c || c == a) {
+                        imba.innerText = "Tam giác này cân";
+                    }else
+                    if (a ==  b&&b == c) {
+                        imba.innerText = "Tam giác này đều";
+                    }else
+                    if(a*a+b*b==c*c||a*a==b*b+c*c||b*b==c*c+a*a){
+                        imba.innerText = "Tam giác này vuông";
+                    }
+                } else{
+                    alert("Tam giác thường");
+                    }
+            }
+        }
+
+    }
+
+</script>
