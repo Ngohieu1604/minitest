@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3c</title>
+</head>
+<body>
+<input type="number" id="a" onchange="pheptinh()">
+<input type="number" id="b" onchange="pheptinh()">
+<p id="kito"></p>
+</body>
+<script>
+    function pheptinh() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let k = 0;
+        let i=a;
+        if (a !="" && b !="") {
+            for (i; i<= b;i++) {
+                k += parseInt(i);
+            }
+            document.getElementById("kito").innerText = k;
+        }else{
+            document.getElementById("kito").innerHTML ="";
+        }
+    }
+</script>
+</html>

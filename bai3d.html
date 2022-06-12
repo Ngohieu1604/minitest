@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài3d</title>
+</head>
+<body>
+<input type="number" id="a" onchange="pheptinh()"><br>
+<p id="kito"></p>
+</body>
+</html>
+<script>
+    function pheptinh(){
+        let theKy=0;
+        let nam = document.getElementById("a").value;
+        if(nam % 100 == 0) {
+            theKy = nam/100;
+        } else {
+            theKy = nam/100 + 1;
+        }
+        document.getElementById("kito").innerText = parseInt(theKy);
+    }
+</script>

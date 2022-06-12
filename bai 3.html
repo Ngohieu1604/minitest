@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<input type="number" id="a" onchange="Hìnhvuông()">
+<p id="kito" ></p>
+</body>
+</html>
+<script>
+    function Hìnhvuông() {
+        let a = document.getElementById("a").value;
+        if (a < 0) {
+            alert("đây không phải hình vuông")
+        }else {
+            let P = a * 4;
+            let S = a * a;
+            document.getElementById("kito").innerText="Chu vi:"+P +"Diện tích"+S;}
+    }
+</script>
