@@ -14,11 +14,12 @@
 </html>
 <script>
     function tamGiac() {
-        let a = Number(document.getElementById("a").value);
-        let b = Number(document.getElementById("b").value);
-        let c = Number(document.getElementById("c").value);
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let c = document.getElementById("c").value;
         let kito = document.getElementById("kito");
         let imba= document.getElementById("imba");
+        console.log(a,b,c)
         {
             if (a <= 0 || b <= 0 || c <= 0) {
                 kito.innerText="hình trên không phải tam giác";
@@ -28,14 +29,13 @@
                     if (a == b || b == c || c == a) {
                         imba.innerText = "Tam giác này cân";
                     }else
-                    if (a ==  b&&b == c) {
+                    if (a ==  b && b == c) {
                         imba.innerText = "Tam giác này đều";
                     }else
                     if(a*a+b*b==c*c||a*a==b*b+c*c||b*b==c*c+a*a){
                         imba.innerText = "Tam giác này vuông";
                     }
-                } else{
-                    alert();
+                } else {
                     }
             }
     }
